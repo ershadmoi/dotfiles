@@ -1,0 +1,38 @@
+[color]
+        branch = auto
+        interactive = auto
+        status = auto
+        diff = auto
+        ui = true
+[user]
+        name = Mohamed Ershad Junaid
+        email = ershad19@gmail.com
+[core]
+        editor = vim
+        pager = less -RX
+	      excludesfile = /Users/Ershad/.gitignore_global
+        whitespace = trailing-space,space-before-tab
+[apply]
+        whitespace = fix
+[alias]
+        lp = log -p
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%ae>%Creset' --abbrev-commit --date=relative
+        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        wc = whatchanged -m --name-status
+        unadd = reset HEAD
+        uncommit = git reset --soft HEAD@{1}
+        crdiff = !git diff -b -U999999999 -w --find-copies-harder --no-color --src-prefix="a/$(cat .git/description)/" --dst-prefix="b/$(cat .git/description)/"
+	      dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+[branch]
+	      autosetuprebase = always
+[core]
+	      autocrlf = input
+	      safecrlf = true
+[push]
+	      default = simple
+[difftool "sourcetree"]
+	      cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	      path =
+[mergetool "sourcetree"]
+	      cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	      trustExitCode = true
