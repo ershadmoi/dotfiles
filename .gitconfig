@@ -5,8 +5,8 @@
         diff = auto
         ui = true
 [user]
-        name = Mohamed Ershad Junaid
-        email = ershad19@gmail.com
+        name = ershadmoi
+        email = ershad19 (at) gmail (dot) com
 [core]
         editor = vim
         pager = less -RX
